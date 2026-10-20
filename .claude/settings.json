@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "model": "claude-sonnet-5",
+  "permissions": {
+    "allow": [
+      "Bash(python3 .claude/skills/beam-tools/beam_tools.py *)",
+      "Bash(python3 .claude/skills/arxiv-digest/arxiv_digest.py *)",
+      "Bash(git status *)",
+      "Bash(git diff *)",
+      "Bash(git log *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Edit(memory/**)",
+      "Edit(digests/**)"
+    ],
+    "ask": [
+      "Bash(git push *)",
+      "Edit(CLAUDE.md)",
+      "Edit(PERMISSIONS.md)",
+      "Edit(.claude/**)"
+    ],
+    "deny": [
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Bash(ssh *)",
+      "Bash(scp *)",
+      "Bash(pip install *)",
+      "Bash(git push * main)",
+      "Bash(git push --force *)",
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(~/.ssh/**)"
+    ],
+    "disableBypassPermissionsMode": "disable"
+  }
+}
